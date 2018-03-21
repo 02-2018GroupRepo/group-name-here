@@ -16,14 +16,14 @@ public class DrinkMachine {
         for(int i = 0; i < 5;i++){
             if(i >=2){
                 for(int j  = 0; j < 6; j++) {
-                    System.out.println("in canned");
+
                     cokeCannedDrink[j] = 12;
                     spriteCannedDrink[j] = 12;
                     fantaCannedDrink[j] = 12;
                 }
             }else{
                 for(int j = 0; j < 5;j++) {
-                    System.out.println("in bottled");
+
                     pepsiBottledDrink[i] = 8;
                     schweppsBottledDrink[i] = 8;
                 }
@@ -46,7 +46,6 @@ public class DrinkMachine {
     public int getAmountOfProducts(int[] arr){
         int sum = 0;
         for(int i = 0; i < arr.length; i++){
-            System.out.println(arr[i]);
             sum+=arr[i];
         }
         return sum;
