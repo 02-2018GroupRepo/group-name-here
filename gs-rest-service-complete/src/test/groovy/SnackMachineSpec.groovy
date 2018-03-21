@@ -14,12 +14,13 @@ class SnackMachineSpec extends Specification {
             snackmachine_one.getSpaces() == 250
         }
     def "getting a product"() {
-        given: "a customer makes a purchase"
-
-        when:"the customer selects a product"
-
-        and:"they select which compartment"
-
-        then:"the machine returns the first product"
+        given: "a snack machine has been created"
+        SnackMachine snackmachine_one = new SnackMachine()
+        and:"there is product in the machine"
+        snackmachine_one.addProduct()
+        when:"the customer selects a Snickers and compartment 3"
+        snackmachine_one.dispense("Snickers", 3)
+        then:"the machine returns the first product in the selected compartment"
+        snackmachine_one.dispense("Snickers", 3) == "Snickers"
     }
 }

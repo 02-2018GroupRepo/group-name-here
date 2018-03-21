@@ -25,35 +25,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnackMachineSpec.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SnackMachineSpec.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="143">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnackMachine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SnackMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="207">
+              <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
               <folding>
                 <element signature="e#441#442#0" expanded="true" />
                 <element signature="e#489#490#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendingCompany.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/VendingCompany.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -89,8 +79,8 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/VendingMachineSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/SnackMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/SnackMachine.java" />
       </list>
     </option>
   </component>
@@ -214,7 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SnackMachineSpec">
+  <component name="RunManager" selected="JUnit.SnackMachineSpec.getting a product">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -275,15 +265,15 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VendingMachine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SnackMachineSpec.getting a product" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="gs-rest-service" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachine" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="SnackMachineSpec" />
+      <option name="METHOD_NAME" value="getting a product" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -396,19 +386,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachine" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachine.creating a machine" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineSpec.creating a machine" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.creating a snack machine" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachine.creating a machine" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineSpec.creating a machine" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.creating a snack machine" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.getting a product" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.creating a snack machine" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineSpec.creating a machine" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachine.creating a machine" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachine" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.getting a product" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SnackMachineSpec.creating a snack machine" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineSpec.creating a machine" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachine.creating a machine" />
       </list>
     </recent_temporary>
   </component>
@@ -429,35 +419,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 11h 12m 52s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 18m 05s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 11h 16m 56s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 18m 38s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 11h 26m 25s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 19m 16s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 11h 26m 51s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 28m 32s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 11h 27m 33s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 28m 51s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_creating_a_snack_machine - 2018.03.21 at 10h 50m 59s.xml">
-      <configuration name="SnackMachineSpec.creating a snack machine" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 13h 29m 37s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_creating_a_snack_machine - 2018.03.21 at 10h 53m 06s.xml">
-      <configuration name="SnackMachineSpec.creating a snack machine" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 13h 30m 39s.xml">
+      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_creating_a_snack_machine - 2018.03.21 at 10h 54m 20s.xml">
-      <configuration name="SnackMachineSpec.creating a snack machine" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 13h 31m 16s.xml">
+      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_creating_a_snack_machine - 2018.03.21 at 11h 01m 01s.xml">
-      <configuration name="SnackMachineSpec.creating a snack machine" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 13h 32m 55s.xml">
+      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_creating_a_snack_machine - 2018.03.21 at 11h 02m 24s.xml">
-      <configuration name="SnackMachineSpec.creating a snack machine" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 13h 50m 19s.xml">
+      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -472,7 +462,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44690967" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36925516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,22 +541,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="207">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
           <folding>
             <element signature="e#441#442#0" expanded="true" />
             <element signature="e#489#490#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
