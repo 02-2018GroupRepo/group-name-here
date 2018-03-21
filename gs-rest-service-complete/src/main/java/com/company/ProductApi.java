@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.company.database.domain.Product;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -30,12 +29,12 @@ public class ProductApi {
 		    for (Product product : arr) {
 		    		productsList.add(product);
 		    }
-		    return productsList;
 			rd.close();
+		    return productsList;
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-
+		return null;
     }
 
 }
