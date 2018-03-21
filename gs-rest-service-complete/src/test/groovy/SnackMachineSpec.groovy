@@ -16,11 +16,12 @@ class SnackMachineSpec extends Specification {
     def "getting a product"() {
         given: "a snack machine has been created"
         SnackMachine snackmachine_one = new SnackMachine()
-        and:"there is product in the machine"
+        when:"the customer selects a product and compartment"
+        and: "each compartment has products"
         snackmachine_one.addProduct()
-        when:"the customer selects a Snickers and compartment 3"
-        snackmachine_one.dispense("Snickers", 3)
+        String name_of_item = snackmachine_one.dispense("Cheetos", 2)
         then:"the machine returns the first product in the selected compartment"
-        snackmachine_one.dispense("Snickers", 3) == "Snickers"
+        name_of_item.equals("Cheetos")
     }
+
 }
