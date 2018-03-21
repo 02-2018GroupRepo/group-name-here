@@ -19,4 +19,6 @@ class OperatorSpec extends Specification {
             println("Please put in a valid access credentials");
         }
     }
+
+
 }
