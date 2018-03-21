@@ -8,7 +8,7 @@ public class SnackMachine {
     public int getTotalCompartments(){
         return Almonds.length + Cheetos.length + Snickers.length + Fritos.length + Crunchbar.length;
     }
-    public void addProduct(){
+    public void addProduct() {
         for (int i = 0; i < 5; i ++
              ) {
             Almonds[i] = 10;
@@ -22,36 +22,73 @@ public class SnackMachine {
     public int getSpaces(){
       return getTotalCompartments() * 10;
     }
+//    NOTE !!!
+//    The dispense method clearly violates the DO NOT REAPEAT YOURSELF principle.  This method can be improved by refactoring.  It was written poorly and using a better implementation is open for discussion.
+
 
     public String dispense(String product, int compartment){
         String productBought = "";
       switch (product){
           case "Almonds":
-              Almonds[compartment] -= 1;
-              productBought = "Almonds";
-              System.out.println(productBought + " " +  Almonds[compartment]);
-              break;
+              if(Almonds[compartment] > 0){
+                  Almonds[compartment] -= 1;
+                  productBought = "Almonds";
+                  System.out.println(productBought + " " +  Almonds[compartment]);
+                  break;
+              }
+              else{
+                  productBought = "empty";
+                  System.out.println(productBought);
+                  break;
+              }
           case "Cheetos":
-              Cheetos[compartment] -= 1;
-              productBought = "Cheetos";
-              System.out.println(productBought + " " +  Cheetos[compartment]);
-              break;
+              if (Cheetos[compartment] > 0) {
+                  Cheetos[compartment] -= 1;
+                  productBought = "Cheetos";
+                  System.out.println(productBought + " " +  Cheetos[compartment]);
+                  break;
+              }
+              else{
+                  productBought = "empty";
+                  System.out.println(productBought);
+                  break;
+              }
           case "Snickers":
-              Snickers[compartment] -= 1;
-              productBought = "Snickers";
-              System.out.println(productBought + " " +  Snickers[compartment]);
-              break;
+              if (Snickers[compartment] > 0) {
+                  Snickers[compartment] -= 1;
+                  productBought = "Snickers";
+                  System.out.println(productBought + " " +  Snickers[compartment]);
+                  break;
+              }
+              else{
+                  productBought = "empty";
+                  System.out.println(productBought);
+                  break;
+              }
           case "Fritos":
-              Fritos[compartment] -= 1;
-              productBought = "Fritos";
-              System.out.println(productBought + " " +  Fritos[compartment]);
-              break;
+              if (Fritos[compartment] > 0){
+                  Fritos[compartment] -= 1;
+                  productBought = "Fritos";
+                  System.out.println(productBought + " " +  Fritos[compartment]);
+                  break;
+              }
+                else{
+                  productBought = "empty";
+                  System.out.println(productBought);
+                  break;
+              }
           case "Crunchbar":
-              Crunchbar[compartment] -= 1;
-              productBought = "Crunchbar";
-              System.out.println(productBought+ " " + Crunchbar[compartment]);
-              break;
-
+              if (Crunchbar[compartment] > 0) {
+                  Crunchbar[compartment] -= 1;
+                  productBought = "Crunchbar";
+                  System.out.println(productBought+ " " + Crunchbar[compartment]);
+                  break;
+              }
+              else{
+                  productBought = "empty";
+                  System.out.println(productBought);
+                  break;
+              }
       }
       return productBought;
     }

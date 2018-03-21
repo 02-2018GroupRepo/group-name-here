@@ -17,11 +17,17 @@ class SnackMachineSpec extends Specification {
         given: "a snack machine has been created"
         SnackMachine snackmachine_one = new SnackMachine()
         when:"the customer selects a product and compartment"
-        and: "each compartment has products"
+        and: "the machine has products"
         snackmachine_one.addProduct()
-        String name_of_item = snackmachine_one.dispense("Cheetos", 2)
-        then:"the machine returns the first product in the selected compartment"
-        name_of_item.equals("Cheetos")
-    }
+        String name_of_item = snackmachine_one.dispense("Fritos", 2)
+        and: "the compartment is not empty"
+        snackmachine_one.addProduct()
+//      String empty_row = snackmachine_one.dispense("Cheetos", 3)
 
+//        !!!! To test that an empty row will return "empty" , the product value must be set to 0 in addProduct
+
+        then:"the machine returns the first product in the selected compartment"
+        name_of_item.equals("Fritos")
+//        empty_row.equals("empty")
+    }
 }

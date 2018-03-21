@@ -25,24 +25,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnackMachineSpec.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SnackMachineSpec.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="74">
+              <caret line="26" column="101" lean-forward="false" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnackMachine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SnackMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="-1495">
+              <caret line="25" column="159" lean-forward="false" selection-start-line="25" selection-start-column="159" selection-end-line="25" selection-end-column="159" />
               <folding>
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,6 +56,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fri</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -79,8 +84,8 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/VendingMachineSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/SnackMachine.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/SnackMachine.java" />
       </list>
     </option>
   </component>
@@ -419,35 +424,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 14h 32m 15s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 23m 05s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 14h 33m 03s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 25m 10s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 14h 33m 53s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 29m 26s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 14h 37m 40s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 30m 29s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec - 2018.03.21 at 14h 38m 19s.xml">
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 31m 02s.xml">
       <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 14h 18m 43s.xml">
-      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 33m 24s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 14h 25m 48s.xml">
-      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 35m 07s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 14h 27m 08s.xml">
-      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 35m 20s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 14h 29m 39s.xml">
-      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 35m 55s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnackMachineSpec_getting_a_product - 2018.03.21 at 14h 30m 40s.xml">
-      <configuration name="SnackMachineSpec.getting a product" configurationId="JUnit" />
+    <history-entry file="SnackMachineSpec - 2018.03.21 at 15h 36m 18s.xml">
+      <configuration name="SnackMachineSpec" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -569,22 +574,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="74">
+          <caret line="26" column="101" lean-forward="false" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachineSpec.groovy">
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/SnackMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="-1495">
+          <caret line="25" column="159" lean-forward="false" selection-start-line="25" selection-start-column="159" selection-end-line="25" selection-end-column="159" />
+          <folding>
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
