@@ -10,7 +10,7 @@ public class Operator {
     private String setPassword = "password123";
     Map<String, ArrayList<Machine>> arrMachine = new HashMap<String, ArrayList<Machine>>();
 
-
+    // Give Authentication to Operator
     public boolean checkPassword(String passwordAttempt) {
         if (passwordAttempt.equals(setPassword)) {
             return true;
@@ -78,6 +78,54 @@ public class Operator {
 
         // Nothing found matching the given "id"
         return null;
+    }
+
+
+    // Print 'each machine' Total Amount
+    public String eachMachineCount() {
+        String amount = "";
+
+        //Print out each machine
+        for (Map.Entry<String, ArrayList<Machine>> entryMachines : arrMachine.entrySet()) {
+            amount += entryMachines.getKey() + "\n";
+            for (Machine machine : entryMachines.getValue()) {
+                amount += "\t[ID: " + machine.getId() + " | Money: " + machine.getMoney() + "] ";
+            }
+            amount += "\n";
+        }
+        return amount;
+    }
+
+
+    // Print 'all machines' Total Amount
+    public String allMachineCount() {
+        Double totalAmount = 0.0;
+
+        // Loop through Map
+        for (Map.Entry<String, ArrayList<Machine>> entries : arrMachine.entrySet()){
+            // Loop through ArrayList
+            for (Machine machine : entries.getValue()) {
+             totalAmount += machine.getMoney();
+            }
+        }
+        return "Total Amount of All Machines: " + "$" + totalAmount;
+    }
+
+
+    // Print 'all machines' Total Amount by 'location'
+    public String allMachineCountByLocation(String location) {
+        Double totalLocationAmount = 0.0;
+
+
+        if (arrMachine.containsKey(location)) {
+            // Loop through this location Array
+            for (Machine machine:arrMachine.get(location)) {
+                totalLocationAmount += machine.getMoney();
+            }
+        } else {
+            return "error";
+        }
+        return "Total amount in " + location + " " + totalLocationAmount;
     }
 
 }

@@ -1,6 +1,5 @@
 package hello
 
-
 class OperatorSpec extends spock.lang.Specification {
 
     def "Operator needs security code for authorization to perform action"() {
@@ -90,14 +89,168 @@ class OperatorSpec extends spock.lang.Specification {
         sampleMachineE.setId("smE");
 
 
-
         when: "Remove machine from location list"
         ChristianHill.removeMachine(sampleMachineA.getId());
 
         then: "return the machine"
-        ChristianHill.arrMachine == ["Harvard": [sampleMachineB, sampleMachineC],
+        ChristianHill.arrMachine == ["Harvard":[sampleMachineB, sampleMachineC],
                                      "Clemson":[sampleMachineD], "Georgia State": [sampleMachineE]]
 
     }
+
+
+    def "Op checks amount of money in each machine"() {
+
+        given: "Op having access"
+
+        Operator ChristianHill = new Operator();
+
+        Machine sampleMachineA = new Machine();
+        sampleMachineA.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineA);
+
+        Machine sampleMachineB = new Machine();
+        sampleMachineB.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineB);
+
+        Machine sampleMachineC = new Machine();
+        sampleMachineC.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineC);
+
+        Machine sampleMachineD = new Machine();
+        sampleMachineD.setLocation("Clemson");
+        ChristianHill.addLocation(sampleMachineD);
+
+        Machine sampleMachineE = new Machine();
+        sampleMachineE.setLocation("Georgia State");
+        ChristianHill.addLocation(sampleMachineE);
+
+        sampleMachineA.setId("smA");
+        sampleMachineB.setId("smB");
+        sampleMachineC.setId("smC");
+        sampleMachineD.setId("smD");
+        sampleMachineE.setId("smE");
+
+        sampleMachineA.setMoney(1);
+        sampleMachineB.setMoney(2);
+        sampleMachineC.setMoney(3);
+        sampleMachineD.setMoney(4);
+        sampleMachineE.setMoney(5);
+        when: "'Each machine' option is chosen"
+
+        String amount = ChristianHill.eachMachineCount();
+        then: "Print each machine 'Total Amount'"
+
+        amount == "Georgia State\n" +
+                "\t[ID: smE | Money: 5.0] \n" +
+                "Harvard\n" +
+                "\t[ID: smA | Money: 1.0] \t[ID: smB | Money: 2.0] \t[ID: smC | Money: 3.0] \n" +
+                "Clemson\n" +
+                "\t[ID: smD | Money: 4.0]"
+    }
+
+
+
+    def "Op checks amount of money in all machine"() {
+
+        given: "Op having access"
+
+        Operator ChristianHill = new Operator();
+
+        Machine sampleMachineA = new Machine();
+        sampleMachineA.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineA);
+
+        Machine sampleMachineB = new Machine();
+        sampleMachineB.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineB);
+
+        Machine sampleMachineC = new Machine();
+        sampleMachineC.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineC);
+
+        Machine sampleMachineD = new Machine();
+        sampleMachineD.setLocation("Clemson");
+        ChristianHill.addLocation(sampleMachineD);
+
+        Machine sampleMachineE = new Machine();
+        sampleMachineE.setLocation("Georgia State");
+        ChristianHill.addLocation(sampleMachineE);
+
+        sampleMachineA.setId("smA");
+        sampleMachineB.setId("smB");
+        sampleMachineC.setId("smC");
+        sampleMachineD.setId("smD");
+        sampleMachineE.setId("smE");
+
+        sampleMachineA.setMoney(1);
+        sampleMachineB.setMoney(2);
+        sampleMachineC.setMoney(3);
+        sampleMachineD.setMoney(4);
+        sampleMachineE.setMoney(5);
+
+        when: "'All Machine' option is chosen"
+
+        String amount = ChristianHill.allMachineCount();
+
+        then: "Print All machines total amount combined"
+        amount == "Total Amount of All Machines: \$" + "15.0"
+    }
+
+
+
+
+
+
+    def "Op checks the amount of money in all machines by location"(){
+
+        given: "Op has access"
+
+        Operator ChristianHill = new Operator();
+
+        Machine sampleMachineA = new Machine();
+        sampleMachineA.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineA);
+
+        Machine sampleMachineB = new Machine();
+        sampleMachineB.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineB);
+
+        Machine sampleMachineC = new Machine();
+        sampleMachineC.setLocation("Harvard");
+        ChristianHill.addLocation(sampleMachineC);
+
+        Machine sampleMachineD = new Machine();
+        sampleMachineD.setLocation("Clemson");
+        ChristianHill.addLocation(sampleMachineD);
+
+        Machine sampleMachineE = new Machine();
+        sampleMachineE.setLocation("Georgia State");
+        ChristianHill.addLocation(sampleMachineE);
+
+        sampleMachineA.setId("smA");
+        sampleMachineB.setId("smB");
+        sampleMachineC.setId("smC");
+        sampleMachineD.setId("smD");
+        sampleMachineE.setId("smE");
+
+        sampleMachineA.setMoney(1);
+        sampleMachineB.setMoney(2);
+        sampleMachineC.setMoney(3);
+        sampleMachineD.setMoney(4);
+        sampleMachineE.setMoney(5);
+
+        and: "a specified location"
+
+        when: "'LocationAmount' option is chosen"
+
+        String amount = ChristianHill.allMachineCountByLocation("Harvard");
+
+        then: "print totalAmount of All machines in a location"
+        amount == "Total amount in Harvard " + "6.0"
+    }
+
+
+
 
 }
