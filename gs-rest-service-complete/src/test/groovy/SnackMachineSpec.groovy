@@ -23,11 +23,18 @@ class SnackMachineSpec extends Specification {
         and: "the compartment is not empty"
         snackmachine_one.addProduct()
 //      String empty_row = snackmachine_one.dispense("Cheetos", 3)
-
 //        !!!! To test that an empty row will return "empty" , the product value must be set to 0 in addProduct
-
         then:"the machine returns the first product in the selected compartment"
         name_of_item.equals("Fritos")
 //        empty_row.equals("empty")
+    }
+    def "check product dispense" () {
+        given:"a product has been purchased"
+        SnackMachine snackmachine_one = new SnackMachine()
+        snackmachine_one.addProduct()
+        when:"the product is dispensed"
+        String name_of_item = snackmachine_one.dispense("Crunchbar", 2)
+        then:"check inventory again to confirm sale"
+        name_of_item.equals("Crunchbar")
     }
 }
