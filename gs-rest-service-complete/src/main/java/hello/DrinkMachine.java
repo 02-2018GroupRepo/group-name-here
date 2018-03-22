@@ -12,11 +12,11 @@ public class DrinkMachine extends Machine{
 	}
 
 
-  private   int[] cokeCannedDrink = new int[6];
-  private   int[] fantaCannedDrink = new int[6];
-  private   int[] dietCokeCannedDrink = new int[6];
-  private   int[] drpepperBottledDrink = new int[5];
-  private   int[] pepsiBottledDrink = new int[5];
+  private  int[] cokeCannedDrink = new int[6];
+  private  int[] fantaCannedDrink = new int[6];
+  private  int[] dietCokeCannedDrink = new int[6];
+  private  int[] drpepperBottledDrink = new int[5];
+  private  int[] pepsiBottledDrink = new int[5];
 
 
    private int numOfProducts;
