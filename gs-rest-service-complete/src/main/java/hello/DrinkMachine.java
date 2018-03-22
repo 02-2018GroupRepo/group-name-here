@@ -12,10 +12,10 @@ public class DrinkMachine extends Machine{
 	}
 
 
-private   int[] cokeCannedDrink = new int[6];
-  private    int[] fantaCannedDrink = new int[6];
-  private   int[] spriteCannedDrink = new int[6];
-  private   int[] schweppsBottledDrink = new int[5];
+  private   int[] cokeCannedDrink = new int[6];
+  private   int[] fantaCannedDrink = new int[6];
+  private   int[] dietCokeCannedDrink = new int[6];
+  private   int[] drpepperBottledDrink = new int[5];
   private   int[] pepsiBottledDrink = new int[5];
 
 
@@ -27,14 +27,14 @@ private   int[] cokeCannedDrink = new int[6];
                 for(int j  = 0; j < 6; j++) {
 
                     cokeCannedDrink[j] = 12;
-                    spriteCannedDrink[j] = 12;
+                    dietCokeCannedDrink[j] = 12;
                     fantaCannedDrink[j] = 12;
                 }
             }else{
                 for(int j = 0; j < 5;j++) {
 
                     pepsiBottledDrink[i] = 8;
-                    schweppsBottledDrink[i] = 8;
+                    drpepperBottledDrink[i] = 8;
                 }
             }
         }
@@ -44,11 +44,11 @@ private   int[] cokeCannedDrink = new int[6];
     }public int getAmountOfCannedFanta(){
         return getAmountOfProducts(fantaCannedDrink);
     }public int getAmountOfCannedSprite(){
-        return getAmountOfProducts(spriteCannedDrink);
+        return getAmountOfProducts(dietCokeCannedDrink);
     }public int getAmountOfBottledPepsi(){
         return getAmountOfProducts(pepsiBottledDrink);
     }public int getAmountOfBottledSchwepps(){
-        return getAmountOfProducts(schweppsBottledDrink);
+        return getAmountOfProducts(drpepperBottledDrink);
     }
 
 
