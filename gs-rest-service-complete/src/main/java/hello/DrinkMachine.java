@@ -1,14 +1,23 @@
 package hello;
 
-public class DrinkMachine {
-  private   int[] cokeCannedDrink = new int[6];
+public class DrinkMachine extends Machine{
+  
+	
+	public DrinkMachine(String id, String location, String company) {
+		super();
+		this.location = location;
+		this.id = id;
+		this.companyName = company;
+		this.total = 0;
+	}
+
+
+private   int[] cokeCannedDrink = new int[6];
   private    int[] fantaCannedDrink = new int[6];
   private   int[] spriteCannedDrink = new int[6];
   private   int[] schweppsBottledDrink = new int[5];
   private   int[] pepsiBottledDrink = new int[5];
 
-
-    private  int sum = 0;
 
    private int numOfProducts;
 
