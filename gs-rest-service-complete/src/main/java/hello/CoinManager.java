@@ -1,18 +1,20 @@
 package hello;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CoinManager {
 
     private ArrayList<Coins> coinList = new ArrayList<Coins>();
-    private HashMap<Double, Integer> coinLog;
+    private ArrayList<Coins> customerCoinList = new ArrayList<Coins>();
+    private HashMap<String, Integer> coinLog;
 
 
     //Validates coins
     public void addCoin(Coins c){
         if(c.getValue() != -1){
-            this.coinList.add(c);
+            this.customerCoinList.add(c);
         }
         else{
             System.out.println("Please insert Nickels, Dimes and Quarters");
@@ -21,45 +23,99 @@ public class CoinManager {
 
     //
     public int howMuchCoins(){
-        return this.coinList.size();
+        return this.customerCoinList.size();
     }
 
     //Get total amount of valid coins
     public double totalAmount(){
         double total = 0;
-        for( Coins c : this.coinList){
+        for( Coins c : this.customerCoinList){
             total += c.getValue();
         }
         return total;
     }
 
+    public double totalAmount(ArrayList<Coins> list){
+        double total = 0;
+        for( Coins c : list){
+            total += c.getValue();
+        }
+        return total;
+    }
+
+
     //Coins that are currently in the machine
     public CoinManager(){
         coinLog = new HashMap<>();
-        coinLog.put(Coins.getQUARTER(), 15);
-        coinLog.put(Coins.getDIME(), 15);
-        coinLog.put(Coins.getNICKEL(), 15);
-        //resetSession();
+        coinLog.put("QUARTER", 15);
+        coinLog.put("DIME", 15);
+        coinLog.put("NICKEL", 15);
+        resetSession();
 
     }
 
     //return change
-    public void returnCustomerChange(double difference){
+    public ArrayList<Coins> returnCustomerChange(double difference){
+        Coins quarter = new Coins(0.25);
+        Coins dime = new Coins(0.10);
+        Coins nickel = new Coins(0.05);
+
+        ArrayList<Coins> change = new ArrayList<Coins>();
+        DecimalFormat df = new DecimalFormat("#.00");
+
+
+
+
+
         do {
-            if (difference % Coins.getQUARTER() == 0) {
-                coinLog.put(Coins.getQUARTER(), coinLog.get(Coins.getQUARTER()) - 1);
-                difference -= Coins.getQUARTER();
-            } else if (difference % Coins.getDIME() == 0) {
-                coinLog.put(Coins.getDIME(), coinLog.get(Coins.getDIME()) - 1);
-                difference -= Coins.getDIME();
-            } else if (difference % Coins.getNICKEL() == 0) {
-                coinLog.put(Coins.getNICKEL(), coinLog.get(Coins.getNICKEL()) - 1);
-                difference -= Coins.getNICKEL();
+            difference = Double.parseDouble(df.format(difference));
+
+            if (Double.parseDouble(df.format(difference % quarter.getValue())) == 0) {
+                coinLog.put("QUARTER", coinLog.get("QUARTER") - 1);
+                difference -= quarter.getValue();
+                System.out.println("ENTERED QUARTERS");
+                change.add(quarter);
+
+
+            } else if (Double.parseDouble(df.format(difference % dime.getValue())) == 0) {
+                coinLog.put("DIME", coinLog.get("DIME") - 1);
+                difference -= dime.getValue();
+                System.out.println("ENTERED DIMES");
+                change.add(dime);
+
+            } else if (Double.parseDouble(df.format(difference % nickel.getValue())) == 0){
+                coinLog.put("NICKEL", coinLog.get("NICKEL") - 1);
+                difference -= nickel.getValue();
+                System.out.println("ENTERED NICKELS");
+                change.add(nickel);
             }
+            System.out.println(difference);
+//            break;
+
 
         }while (difference > 0);
 
 
+        return change;
     }
-    
+
+//    public double change(Product p){
+//
+//         return this.totalAmount() - //p.getPrice()???? ;
+//
+//    }
+
+    public double change(){
+
+        return this.totalAmount() - 0.75 ;
+
+    }
+
+    public void resetSession(){
+       customerCoinList.clear();
+
+
+    }
+
+
 }

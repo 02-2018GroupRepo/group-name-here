@@ -1,5 +1,10 @@
 package hello;
 
+import java.util.ArrayList;
+import java.util.Map;
+
+import groovyjarjarantlr.collections.List;
+
 public class Product {
 	
 	private Long id;
@@ -7,6 +12,10 @@ public class Product {
 	private double retailPrice;
 	private double wholesalePrice;
 	private String type;
+	public static ArrayList<Product> productList;
+	{
+		productList = ProductApi.retrieveProductList();
+	}
 	
 	public Long getId() {
 		return id;
