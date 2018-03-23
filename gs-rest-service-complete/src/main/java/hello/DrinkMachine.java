@@ -1,6 +1,12 @@
 package hello;
 
 public class DrinkMachine extends Machine{
+	
+	private  int[] cokeCannedDrink = {12, 12, 12, 7, 7, 7};
+	private  int[] fantaCannedDrink = {12, 12, 12, 7, 7, 7};
+	private  int[] dietCokeCannedDrink = {12, 12, 12, 7, 7, 7};
+	private  int[] drpepperBottledDrink = {5, 4, 5, 4, 7};
+	private  int[] pepsiBottledDrink = {5, 4, 5, 4, 7};
   
 	
 	public DrinkMachine(String id, String location, String company) {
@@ -9,15 +15,13 @@ public class DrinkMachine extends Machine{
 		this.id = id;
 		this.companyName = company;
 		this.total = 0;
+		this.cokeCannedDrink = cokeCannedDrink;
+		this.fantaCannedDrink = fantaCannedDrink;
+		this.dietCokeCannedDrink = dietCokeCannedDrink;
+		this.drpepperBottledDrink = drpepperBottledDrink;
+		this.pepsiBottledDrink = pepsiBottledDrink;
+		this.coinManager = new CoinManager();
 	}
-
-
-  private  int[] cokeCannedDrink = new int[6];
-  private  int[] fantaCannedDrink = new int[6];
-  private  int[] dietCokeCannedDrink = new int[6];
-  private  int[] drpepperBottledDrink = new int[5];
-  private  int[] pepsiBottledDrink = new int[5];
-
 
    private int numOfProducts;
 
@@ -43,11 +47,11 @@ public class DrinkMachine extends Machine{
         return getAmountOfProducts(cokeCannedDrink);
     }public int getAmountOfCannedFanta(){
         return getAmountOfProducts(fantaCannedDrink);
-    }public int getAmountOfCannedSprite(){
+    }public int getAmountOfCannedDietCoke(){
         return getAmountOfProducts(dietCokeCannedDrink);
     }public int getAmountOfBottledPepsi(){
         return getAmountOfProducts(pepsiBottledDrink);
-    }public int getAmountOfBottledSchwepps(){
+    }public int getAmountOfBottledDrPepper(){
         return getAmountOfProducts(drpepperBottledDrink);
     }
 
@@ -59,6 +63,29 @@ public class DrinkMachine extends Machine{
         }
         return sum;
 
+    }
+    
+    public int validateInventory(String id) {
+    		switch (id) {
+			case "30":
+				System.out.println(this.getAmountOfCannedCokes());
+				return this.getAmountOfCannedCokes();
+
+			case "26":
+				return this.getAmountOfCannedFanta();
+				
+			case "18":
+				return this.getAmountOfCannedDietCoke();
+				
+			case "19":
+				return this.getAmountOfBottledPepsi();
+				
+			case "21":
+				return this.getAmountOfBottledDrPepper();
+			
+			default:
+				return 0;
+			}
     }
 }
 
