@@ -1,5 +1,8 @@
 package hello;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 public class SnackMachine extends Machine{
     private int[] Almonds = {10,9,5,10,8};
     private int[] Cheetos = {10,9,5,10,6};
@@ -13,6 +16,7 @@ public class SnackMachine extends Machine{
 		this.id = id;
 		this.companyName = company;
 		this.total = 0;
+        this.coinManager = new CoinManager();
 	}
 
     int numOfProducts;
@@ -37,4 +41,6 @@ public class SnackMachine extends Machine{
         return sum;
 
     }
+
+
 }

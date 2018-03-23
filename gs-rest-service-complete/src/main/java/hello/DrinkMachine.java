@@ -9,7 +9,9 @@ public class DrinkMachine extends Machine{
 		this.id = id;
 		this.companyName = company;
 		this.total = 0;
-	}
+        this.coinManager = new CoinManager();
+
+    }
 
 
   private  int[] cokeCannedDrink = new int[6];
