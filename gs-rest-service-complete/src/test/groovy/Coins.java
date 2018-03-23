@@ -5,17 +5,17 @@ public class Coins {
     private final double QUARTER= 0.25;
     private double currentValue;
 
-    public static double getNICKEL(){
-        return getNICKEL();
-    }
-
-    public static double getDIME(){
-        return getDIME();
-    }
-
-    public static double getQUARTER(){
-        return getQUARTER();
-    }
+//    public static double getNICKEL(){
+//        return getNICKEL();
+//    }
+//
+//    public static double getDIME(){
+//        return getDIME();
+//    }
+//
+//    public static double getQUARTER(){
+//        return getQUARTER();
+//    }
 
     public Coins(double value){
         if(value == QUARTER){
