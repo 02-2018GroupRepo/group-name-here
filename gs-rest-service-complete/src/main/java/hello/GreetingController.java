@@ -78,9 +78,11 @@ public class GreetingController {
     					System.out.println("User did not enter enough coins");
     					response.getWriter().write(gson.toJson(new MachineDataJson(0, false, false)));
     				} else {
+    					((DrinkMachine) myMachine).dispense(productName, 1);
     					double change = myMachine.coinManager.totalAmount() - 2;
     					String stringChange = String.format("%.2f", change);
     					System.out.printf("Drink Machine in %s sold %s.", myMachine.getLocation(), productName);
+    					System.out.println(((DrinkMachine) Database.machineDb.get(machineId)).getAmountOfBottledDrPepper());
     					response.getWriter().write(gson.toJson(new MachineDataJson(Double.valueOf(change), false, true)));
     				}
     			} else {
@@ -96,7 +98,6 @@ public class GreetingController {
     					((SnackMachine) myMachine).dispense(productName, 1);
     					String stringChange = String.format("%.2f", change);
     					System.out.printf("Snack Machine in %s sold a %s.", myMachine.getLocation(), productName);
-    					System.out.println(((SnackMachine) Database.machineDb.get(machineId)).getAmountOfAlmonds());
     					response.getWriter().write(gson.toJson(new MachineDataJson(Double.valueOf(change), false, true)));
     				}
     			} else {

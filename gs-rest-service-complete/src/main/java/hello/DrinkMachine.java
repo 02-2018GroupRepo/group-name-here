@@ -61,6 +61,7 @@ public class DrinkMachine extends Machine{
         for(int i = 0; i < arr.length; i++){
             sum+=arr[i];
         }
+        
         return sum;
 
     }
@@ -86,6 +87,62 @@ public class DrinkMachine extends Machine{
 			default:
 				return 0;
 			}
+    }
+    
+    public String dispense(String product, int compartment) {
+        String productBought = "";
+        System.out.println(product);
+        switch (product) {
+            case "Coke":
+                if (cokeCannedDrink[compartment] > 0) {
+                	    cokeCannedDrink[compartment] -= 1;
+                    productBought = "Coke";
+                    break;
+                } else {
+                    productBought = "empty";
+                    break;
+                }
+            case "Fanta":
+                if (fantaCannedDrink[compartment] > 0) {
+                	fantaCannedDrink[compartment] -= 1;
+                    productBought = "Fanta";
+                    break;
+                } else {
+                    productBought = "empty";
+                    System.out.println(productBought);
+                    break;
+                }
+            case "Diet Coke":
+                if (dietCokeCannedDrink[compartment] > 0) {
+                	dietCokeCannedDrink[compartment] -= 1;
+                    productBought = "Diet Coke";
+                    break;
+                } else {
+                    productBought = "empty";
+                    System.out.println(productBought);
+                    break;
+                }
+            case "Dr Pepper":
+                if (drpepperBottledDrink[compartment] > 0) {
+                	drpepperBottledDrink[compartment] -= 1;
+                    productBought = "Dr Pepper";
+                    break;
+                } else {
+                    productBought = "empty";
+                    System.out.println(productBought);
+                    break;
+                }
+            case "Pepsi":
+                if (pepsiBottledDrink[compartment] > 0) {
+                	pepsiBottledDrink[compartment] -= 1;
+                    productBought = "Pepsi";
+                    break;
+                } else {
+                    productBought = "empty";                    
+                    break;
+                }
+        }
+        return productBought;
     }
 }
 
