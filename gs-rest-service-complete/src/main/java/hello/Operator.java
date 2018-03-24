@@ -118,6 +118,7 @@ public class Operator {
         if (arrMachine.containsKey(location)) {
             // Loop through this location Array
             for (Machine machine:arrMachine.get(location)) {
+
                 totalLocationAmount += machine.coinManager.totalAmount();
             }
         } else {
@@ -189,7 +190,4 @@ public class Operator {
         System.out.println("6: Print machines");
         System.out.println("7: Done");
     }
-
-
-
 }

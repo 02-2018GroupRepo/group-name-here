@@ -69,6 +69,60 @@ class CoinManagerFeatureSpec extends Specification {
 
     }
 
+    def "Shows the value of change from list"(){
+
+        given: "a product that is 0.75"
+        double prod = 0.75;
+
+        and: "the user adds 4 quarters, 2 dimes and 2 nickels"
+        Coins coin1 = new Coins(0.25);
+        Coins coin2 = new Coins(0.25);
+        Coins coin3 = new Coins(0.25);
+        Coins coin4 = new Coins(0.25);
+        Coins coin5 = new Coins(0.10);
+        Coins coin6 = new Coins(0.10);
+        Coins coin7 = new Coins(0.05);
+        Coins coin8 = new Coins(0.05);
+
+        and: "a coin manager"
+        CoinManager cm = new CoinManager()
+
+        when: "when the consumer adds too much extra money"
+        cm.addCoin(coin1)
+        cm.addCoin(coin2)
+        cm.addCoin(coin3)
+        cm.addCoin(coin4)
+        cm.addCoin(coin5)
+        cm.addCoin(coin6)
+        cm.addCoin(coin7)
+        cm.addCoin(coin8)
+
+        then: "return the value of their change"
+        double difference = cm.change();
+        ArrayList<Coins> listOfCoins = cm.returnCustomerChange(difference)
+        double change = cm.totalAmount(listOfCoins)
+        System.out.println(change);
+        true
+
+
+
+        and: "session is returns 0";
+        cm.resetSession();
+        0 == cm.howMuchCoins();
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
 
 
 
