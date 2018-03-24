@@ -1,9 +1,6 @@
 package hello;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Operator {
 
@@ -37,8 +34,9 @@ public class Operator {
     public void printLocation() {
 
         for (Map.Entry<String, ArrayList<Machine>> arrlist : arrMachine.entrySet()) {
+            System.out.println(arrlist.getKey());
             for (Machine machine : arrlist.getValue()) {
-                System.out.println(machine.getLocation());
+                System.out.println("\t[ID: " + machine.id + "]");
             }
         }
     }
@@ -89,7 +87,7 @@ public class Operator {
         for (Map.Entry<String, ArrayList<Machine>> entryMachines : arrMachine.entrySet()) {
             amount += entryMachines.getKey() + "\n";
             for (Machine machine : entryMachines.getValue()) {
-                amount += "\t[ID: " + machine.getId() + " | Money: " + machine.total + "] ";
+                amount += "\t[ID: " + machine.getId() + " | Money: " + machine.coinManager.totalAmount() + "] ";
             }
             amount += "\n";
         }
@@ -105,7 +103,7 @@ public class Operator {
         for (Map.Entry<String, ArrayList<Machine>> entries : arrMachine.entrySet()){
             // Loop through ArrayList
             for (Machine machine : entries.getValue()) {
-                totalAmount += machine.total;
+                totalAmount += machine.coinManager.totalAmount();
             }
         }
         return "Total Amount of All Machines: " + "$" + totalAmount;
@@ -120,7 +118,8 @@ public class Operator {
         if (arrMachine.containsKey(location)) {
             // Loop through this location Array
             for (Machine machine:arrMachine.get(location)) {
-                totalLocationAmount += machine.total;
+
+                totalLocationAmount += machine.coinManager.totalAmount();
             }
         } else {
             return "error";
@@ -128,4 +127,67 @@ public class Operator {
         return "Total amount in " + location + " " + totalLocationAmount;
     }
 
+
+
+    public void operatorUI(){
+        int userInput;
+        Random rand = new Random();
+
+        do {
+            printOperatorOptions();
+
+            System.out.println("\nEnter an operator option:");
+           userInput = Buffer.intBufferIO();
+
+           switch(userInput){
+               case 1:
+                   System.out.println("Create new machine");
+                   int randID = rand.nextInt(100);
+                   System.out.println("Add a location");
+                   String location = Buffer.stringBufferIO();
+                   SnackMachine newMachine = new SnackMachine("ID_"+randID, location, "Home Depot");
+                   addLocation(newMachine);
+                   break;
+               case 2:
+                   printLocation();
+                   System.out.println("Which machine to remove");
+                   String id = Buffer.stringBufferIO();
+                   removeMachine(id);
+                   break;
+               case 3:
+                   System.out.println(eachMachineCount());
+                   break;
+               case 4:
+                   printLocation();
+                   System.out.println("Enter location to return total amount of money");
+                   System.out.println(allMachineCountByLocation(Buffer.stringBufferIO()));
+                   break;
+               case 5:
+                   System.out.println(allMachineCount());
+                   break;
+               case 6:
+                   printLocation();
+                   break;
+               case 7:
+                   break;
+                   default:
+                       System.out.println("Sorry incorrect input");
+                       break;
+           }
+        }
+        while(userInput != 7);
+
+    }
+
+    public void printOperatorOptions(){
+
+        System.out.println();
+        System.out.println("1: Add a machine to a location");
+        System.out.println("2: Remove a machine from a location");
+        System.out.println("3: Show each machine total amount of money");
+        System.out.println("4: Show each location total amount of money");
+        System.out.println("5: Show amount of money across of all machines");
+        System.out.println("6: Print machines");
+        System.out.println("7: Done");
+    }
 }
