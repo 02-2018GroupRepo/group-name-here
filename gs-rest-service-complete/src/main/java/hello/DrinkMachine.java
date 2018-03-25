@@ -109,7 +109,7 @@ public class DrinkMachine extends Machine{
                     break;
                 } else {
                     productBought = "empty";
-                    System.out.println(productBought);
+                    //System.out.println(productBought);
                     break;
                 }
             case "Diet Coke":
@@ -119,7 +119,7 @@ public class DrinkMachine extends Machine{
                     break;
                 } else {
                     productBought = "empty";
-                    System.out.println(productBought);
+                    //System.out.println(productBought);
                     break;
                 }
             case "Dr Pepper":
@@ -129,7 +129,7 @@ public class DrinkMachine extends Machine{
                     break;
                 } else {
                     productBought = "empty";
-                    System.out.println(productBought);
+                    //System.out.println(productBought);
                     break;
                 }
             case "Pepsi":

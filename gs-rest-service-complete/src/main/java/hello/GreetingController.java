@@ -32,10 +32,19 @@ public class GreetingController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/admin")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Greeting(counter.incrementAndGet(),
-                            String.format(template, name));
+    @RequestMapping("/api/db")
+    public void requestMachineDb(HttpServletRequest request, HttpServletResponse response) {
+    	response.addHeader("Access-Control-Allow-Origin", "*");
+   	 	response.addHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS");
+   	 	response.addHeader("Access-Control-Allow-Headers", "Origin, Content-Type, X-Auth-Token");
+   	 	response.setContentType("application/json");
+   	 	Gson gson = new Gson();
+   	 	
+    	try {
+    		response.getWriter().write(gson.toJson(Database.machineDb));
+    	} catch (Exception e) {
+    		System.out.println(e);
+    	}
     }
     
     @RequestMapping("/api/machine")
@@ -52,7 +61,6 @@ public class GreetingController {
     	 double quartersValue = Double.valueOf(quarters) * .25;
     	 double dimesValue = Double.valueOf(dimes) * .1;
     	 double nickelsValue = Double.valueOf(nickels) * .05;
-    	 System.out.println(Database.machineDb);
 		
     		Machine myMachine = Database.machineDb.get(machineId);
     		
@@ -80,12 +88,13 @@ public class GreetingController {
     				} else {
     					((DrinkMachine) myMachine).dispense(productName, 1);
     					double change = myMachine.coinManager.totalAmount() - 2;
+    					myMachine.coinManager.resetSession();
     					String stringChange = String.format("%.2f", change);
     					System.out.printf("Drink Machine in %s sold %s.", myMachine.getLocation(), productName);
-    					System.out.println(((DrinkMachine) Database.machineDb.get(machineId)).getAmountOfBottledDrPepper());
     					response.getWriter().write(gson.toJson(new MachineDataJson(Double.valueOf(change), false, true)));
     				}
     			} else {
+    				System.out.println(productName + " is out of stock in " + myMachine.getLocation());
     				response.getWriter().write(gson.toJson(new MachineDataJson(0, false, true)));
     			}
     		} else {
@@ -96,6 +105,7 @@ public class GreetingController {
     				} else {
     					double change = myMachine.coinManager.totalAmount() - 2;
     					((SnackMachine) myMachine).dispense(productName, 1);
+    					myMachine.coinManager.resetSession();
     					String stringChange = String.format("%.2f", change);
     					System.out.printf("Snack Machine in %s sold a %s.", myMachine.getLocation(), productName);
     					response.getWriter().write(gson.toJson(new MachineDataJson(Double.valueOf(change), false, true)));

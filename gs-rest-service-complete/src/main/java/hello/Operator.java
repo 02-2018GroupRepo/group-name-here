@@ -5,7 +5,14 @@ import java.util.*;
 public class Operator {
 
     private String setPassword = "password123";
-    Map<String, ArrayList<Machine>> arrMachine = new HashMap<String, ArrayList<Machine>>();
+    Map<String, ArrayList<Machine>> arrMachine;
+    {
+    	
+    }
+    
+    
+    
+    //= new HashMap<String, ArrayList<Machine>>();
 
     // Give Authentication to Operator
     public boolean checkPassword(String passwordAttempt) {

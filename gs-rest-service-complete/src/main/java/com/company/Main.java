@@ -1,6 +1,5 @@
 package com.company;
 
-
 import hello.Operator;
 
 public class Main {

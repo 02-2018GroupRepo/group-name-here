@@ -113,8 +113,6 @@ public class CoinManager {
 
     public void resetSession(){
        customerCoinList.clear();
-
-
     }
 
 
